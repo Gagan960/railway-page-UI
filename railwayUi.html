@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRCTC Design</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #e5e5e5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .container {
+      display: flex;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .left-panel {
+      padding: 30px;
+      width: 55%;
+    }
+
+    .right-panel {
+      width: 45%;
+    }
+
+    .right-panel img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .logos {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .logos img {
+      width: 40px;
+    }
+
+    .header-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .sub-header {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sub-header span {
+      font-weight: bold;
+    }
+
+    .sub-header .green { color: #16a34a; }
+    .sub-header .orange { color: #f97316; }
+    .sub-header .blue { color: #2563eb; }
+
+    .nav-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .nav-tabs button {
+      padding: 8px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background-color: white;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-tabs .active {
+      background-color: #0d3c84;
+      color: white;
+    }
+
+    .login-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .login-links button {
+      padding: 6px 12px;
+      font-size: 13px;
+      border: none;
+      border-radius: 4px;
+      background-color: #f3f4f6;
+      cursor: pointer;
+    }
+
+    .form-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9fafb;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      gap: 10px;
+    }
+
+    .form-group {
+      background-color: white;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 10px;
+      flex: 1;
+    }
+
+    .form-group small {
+      color: #6b7280;
+      font-size: 12px;
+      display: block;
+    }
+
+    .form-group span {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .search-btn {
+      width: 100%;
+      background-color: #16a34a;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition:  0.3s ease;
+    }
+
+    .search-btn:hover {
+      background-color: #15803d;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <!-- Login/Links -->
+      <div class="login-links">
+        <button>Login</button>
+        <button>Register</button>
+        <button>Agent Login</button>
+      </div>
+
+      <!-- Logos -->
+      <div class="logos">
+        <img src="bbf7d6b59dee93e0fb1008416bfeed8b4a476357.png" alt="IRCTC">
+        <img src="fb40f771a70eed9839f37e1e0d975e45a1ead05f.png" alt="Indian Railways" width="50">
+      </div>
+
+      <!-- Header Text -->
+      <div class="header-text">Indian Railways</div>
+      <div class="sub-header">
+        <span class="green">Safety</span> 
+        <span class="orange">Security</span> 
+        <span class="blue">Punctuality</span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="nav-tabs">
+        <button class="active">BOOK Ticket</button>
+        <button>PNR Status</button>
+        <button>Charts / Vacancy</button>
+      </div>
+
+      <!-- Form Section -->
+      <div class="form-card">
+        <div class="form-row">
+          <div class="form-group">
+            <small>From</small>
+            <span>🚉 Bangalore</span><br>
+            <small>KSR - Bangalore</small>
+          </div>
+          <div class="form-group">
+            <small>To</small>
+            <span>🚉 Kasaragod</span><br>
+            <small>KSD - Kasaragod</small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <small>Date</small>
+            <span>📅 01 Aug 23</span><br>
+            <small>Tuesday</small>
+          </div>
+          <div class="form-group">
+            <small>Class</small>
+            <span>3A</span><br>
+            <small>AC 3 Tier</small>
+          </div>
+          <div class="form-group">
+            <small>Seat Type</small>
+            <span>TATKAL</span><br>
+            <small>AC 3 Tier</small>
+          </div>
+        </div>
+
+        <button class="search-btn">Search Train</button>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <img src="f0b6593e8ed12a7f02e29fd012b3cf6cbfb90252.png" alt="Train Image">
+    </div>
+  </div>
+
+</body>
+</html>
